@@ -1,0 +1,43 @@
+div.dokuwiki {
+  div.codeblockedit-wrapper {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: auto; /* Same as copy2clipboard - contains the pre element properly */
+  }
+
+  /* Style for edit button - works both standalone and inside cp2clipcont */
+  button.codeblockedit-btn {
+    position: absolute;
+    top: 0; /* Upper left corner */
+    left: 0;
+    /* Pencil icon - using inherit for theme compatibility */
+    background-color: inherit;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23888888'%3E%3Cpath d='M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 21px;  /* <<< ICON SIZE: Change this value to make icon bigger/smaller */
+    width: 22px;            /* <<< BUTTON WIDTH: Adjust along with icon size */
+    height: 22px;           /* <<< BUTTON HEIGHT: Adjust along with icon size */
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    z-index: 10;
+  }
+
+
+  button.codeblockedit-btn:hover {
+    opacity: 1;
+  }
+
+  .desktop button.codeblockedit-btn {
+    visibility: hidden;
+  }
+
+  .desktop:hover button.codeblockedit-btn {
+    visibility: visible;
+  }
+}
+

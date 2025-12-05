@@ -1,0 +1,7 @@
+base   codeblockedit
+author Jason CH
+email  jasonwch@msn.com
+date   2025-12-05
+name   Code Block Edit Plugin
+desc   Adds a floating edit button to code and file blocks
+url    https://github.com/jasonwch/dw_codeblockedit/
